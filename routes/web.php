@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('users/{user}', function (App\User $user) {
-    return $user;
-});
+Route::get('/api/search/{term}', function ($term) {
+    return ['results' => $term];
+})->middleware('throttle:3');
