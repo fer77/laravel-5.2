@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/api/search/{term}', function ($term) {
-    return ['results' => $term];
-})->middleware('throttle:3');
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Auth::routes(); 
+
+Route::get('/home', 'HomeController@index')->name('home');
