@@ -22,3 +22,6 @@ the `HomeController` adds auth through middleware to all of its routes.
 
 
 the command (`php artisan make:auth`) also creates the views with all of the stuff the login and registration forms need.
+
+## 4
+
