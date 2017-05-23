@@ -23,5 +23,11 @@ the `HomeController` adds auth through middleware to all of its routes.
 
 the command (`php artisan make:auth`) also creates the views with all of the stuff the login and registration forms need.
 
-## 4
+## 5
 
+Authentication: `config/auth.php` Laravel offers _session_ and _token_ based authentication.
+				`Illuminare/Auth/SessionGuard` contains the method that get called when calling `Auth::user()`.
+
+1. create a route.
+
+2. 

@@ -37,12 +37,12 @@ return [
 
     'guards' => [
         'web' => [
-            'driver' => 'session',
+            'driver' => 'session', // SessionGuard
             'provider' => 'users',
         ],
 
         'api' => [
-            'driver' => 'token',
+            'driver' => 'token', // TokenGuard
             'provider' => 'users',
         ],
     ],
