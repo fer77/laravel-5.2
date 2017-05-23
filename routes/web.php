@@ -28,8 +28,18 @@ Route::get('/', function () {
 // 	return 'Validation was a success!!';
 // });
 // All the above can be replaced with this:
-Route::post('/', 'InvitationsController@store');
+// Route::post('/', 'InvitationsController@store');
 
-Auth::routes(); 
+// Auth::routes(); 
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['middleware' => ['web']], function() {
+//
+});
+
+Route::group(['prefix' => 'api/v1', 'middleware' => 'auth:api'], function() {
+	Route::get('/', function() {
+		return Auth::guard('api')->$user();
+	});
+});
